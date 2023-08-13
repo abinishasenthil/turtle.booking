@@ -1,0 +1,99 @@
+/* Common styles for all pages */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://wallpaperaccess.com/full/39632.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the content takes at least the full viewport height */
+    font-weight: bold;
+}
+
+/* Page title styles */
+h1 {
+    text-align: center;
+    margin: 20px 0; /* Added margin to create space at the top */
+    color: #ffffff; /* Dark blue for a coastal touch */
+}
+
+/* Form styles */
+form {
+    width: 100%;
+    max-width: 500px; /* Increase the form's maximum width */
+    padding: 20px;
+    border: 3px solid #aad4ff; /* Light blue border like coastal waters */
+    border-radius: 100px;
+    background-color: rgba(149, 199, 243, 0.8); /* Pale blue form background with transparency */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add margin at the top to separate from page title */
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+/* Form input styles */
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #aad4ff; /* Light blue border */
+    border-radius: 5px;
+}
+
+/* Form label styles */
+label {
+    font-weight: lighter;
+    color: #171819; /* Dark blue labels for a coastal touch */
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+     float: right;
+    margin-left: 20px;
+}
+
+th, td {
+    border: 1px solid #eceef0; /* Light blue table borders */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e0f0ff; /* Light blue table header background */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    background-color: #1f487e; /* Dark blue button like coastal waters */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Added margin to create space at the bottom */
+}
+
+/* Center align button */
+.center-button {
+    text-align: center;
+}
+
+/* Additional specific styles for each page can be added here */
