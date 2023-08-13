@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/mob.css">
+    <link rel="stylesheet" type="text/css" href="Common.css">
+    <title>Payment Page</title>
+</head>
+<body>
+    <form id="payment">
+        <fieldset>
+            <h2><span style="font-weight: lighter;">Card Number</span></h2>
+            <div id="payment">
+                <input type="text" id="cardNumber" name="cardNumber" size="16" placeholder="ENTER YOUR CARD NUMBER" required>
+            </div>
+
+            <div id="payment">
+                <h2>
+                    <label for="date">Expiry Date </label>
+                    <input type="date" id="date" name="arrivalDate" value="date" autofocus required>
+            </h2>          </div>
+
+            <h2><span style="font-weight: lighter;">CVC/CVV</span></h2>
+            <div id="payment-right">
+                <input type="text" id="cvcCvv" name="cvcCvv" size="16" placeholder="xxxx" required>
+            </div>
+
+            <h2><span style="font-weight: lighter;">Name on Card</span></h2>
+            <div id="payment">
+                <input type="text" id="nameOnCard" name="nameOnCard" size="16" placeholder="Card Name" required>
+            </div>
+
+            <section class="summary-table" id="summary-table">
+                <h2>Summary Table</h2>
+                <!-- Summary table to display the selected options and total payable -->
+                <!-- You can style this table using CSS -->
+                <table id="summary-table">
+                    <tbody>
+
+                        <tr>
+                        
+                        <td>Date: </td>
+                        
+                        <td>null</td>
+                        
+                        </tr>
+                        
+                        <tr>
+                        
+                        <td>Time:</td>
+                        
+                        <td>12:00 pm - 1:00 pm </td>
+                        
+                        </tr>
+                        
+                        <tr>
+                        
+                        <td>Foreigner Adult:</td>
+                        
+                        <td>0</td>
+                        
+                        </tr>
+                        
+                        <tr>
+                        
+                        <td>Foreigner Child:</td>
+                        
+                        <td>1</td>
+                        
+                        </tr>
+                        
+                        <tr>
+                        
+                        <td>SL Adult:</td>
+                        
+                        <td>0</td>
+                        
+                        </tr>
+                        
+                        <tr>
+                        
+                        <td>SL Child:</td>
+                        
+                        <td>0</td>
+                        
+                        </tr>
+                        
+                        <tr>
+                        
+                        <td>Infant:</td>
+                        
+                        <td>0</td>
+                        
+                        </tr>
+                        
+                        <tr> 
+                        
+                        <td>Total Payable:</td>
+                        
+                        <td>5 USD</td>
+                        
+                        </tr>
+                        
+                        </tbody>
+                  <!-- Summary table content will be updated dynamically by JavaScript -->
+                </table>  
+              </section>
+        </fieldset>
+    </form>
+    <center><button onclick="window.location.href='confirmation.html'">Continue with purchase</button></center>
+	
+	<script>
+       document.addEventListener('DOMContentLoaded', function () {
+
+function updateSummaryTable() {
+const date = localStorage.getItem("date");
+const duration = localStorage.getItem("duration");
+const foreignerAdultCount = localStorage.getItem("foreignerAdultCount");
+const foreignerChildCount = localStorage.getItem("foreignerChildCount");
+const slAdultCount = localStorage.getItem("slAdultCount");
+const slChildCount = localStorage.getItem("slChildCount");
+const infantCount = localStorage.getItem("infantCount");
+const totalPayable = localStorage.getItem("totalPayable");
+
+    const cells = document.getElementById('summary-table').querySelectorAll('td');
+    cells[1].textContent = date;
+    cells[3].textContent = duration;
+    cells[5].textContent = foreignerAdultCount; // Correct index for Foreigner Adult
+    cells[7].textContent = foreignerChildCount; // Correct index for Foreigner Child
+    cells[9].textContent = slAdultCount; // Correct index for SL Adult
+    cells[11].textContent = slChildCount; // Correct index for SL Child
+    cells[13].textContent = infantCount; // Correct index for Infant
+    cells[15].textContent = `${totalPayable} USD`;
+
+}
+
+updateSummaryTable();  
+    });
+    </script>
+    
+</body>
+</html>
