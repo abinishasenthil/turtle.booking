@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link rel="stylesheet" href="international-telephone-input.css">
+    
+    <style>
+
+        /* Add custom CSS here to style the layout */
+        .flex-container {
+            display: cover;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        } 
+        .details-field {
+            width: 100%; /* Adjust the width as needed */
+            margin-bottom: 20px; /* Add spacing between fields */
+            padding: 0;
+        }
+
+        @media (max-width: 768px) {
+            /* Add responsive styling here if needed */
+        }
+
+
+    </style>
+    <title>Details Page</title>
+</head>
+<body>
+    
+<script>
+    // Get references to form fields and the continue purchase button
+    const fullNameInput = document.getElementById('fullName');
+    const mobNumInput = document.getElementById('mobNum');
+    const emailInput = document.getElementById('Email');
+    const confirmEmailInput = document.getElementById('confirmEmail');
+    const continuePurchaseBtn = document.getElementById('continuePurchaseBtn');
+
+    // Function to validate form fields and enable/disable the button
+    function validateForm() {
+        const fullName = fullNameInput.value.trim();
+        const mobNum = mobNumInput.value.trim();
+        const email = emailInput.value.trim();
+        const confirmEmail = confirmEmailInput.value.trim();
+
+        const isValid = fullName !== '' && mobNum !== '' && email !== '' && email === confirmEmail;
+
+        continuePurchaseBtn.disabled = !isValid;
+    }
+
+    // Attach event listeners to form fields for input and validation
+    fullNameInput.addEventListener('input', validateForm);
+    mobNumInput.addEventListener('input', validateForm);
+    emailInput.addEventListener('input', validateForm);
+    confirmEmailInput.addEventListener('input', validateForm);
+</script>
+    <form id="details">
+        <fieldset>
+            <div class="flex-container">
+                <div class="details-field">
+                    <h2><span style="font-weight: lighter;">Full name</span></h2>
+                    <div id="details">
+                        <label><span style="font-weight: lighter; font-size: smaller;">Same as in your ID</span></label>
+                        <input type="text" id="fullName" name="fullName" size="16" placeholder="Full Name" required>
+                    </div>
+                </div>
+                <div class="details-field">
+                    <h2><span style="font-weight: lighter;">Mobile Number</span></h2>
+                    <style>
+
+
+                        ul {
+                            top: 100% !important;
+                            transform: translateY(0%) !important;
+                        }
+
+                        .iti {
+                            position: relative;
+                            display: inline-block;
+                            width: 280px;
+
+
+                        }
+
+                        input[type=tel] {
+                            padding-right: 6px;
+                            padding-left: 52px;
+                            margin-left: 0;
+
+                            position: relative;
+                            margin-top: 0 !important;
+                            margin-bottom: 0 !important;
+                            margin-right: 0;
+                            border: 1px solid #CCC;
+                            width: 270px;
+                            height: 30px;
+                            /* padding: 6px 12px; */
+                            border-radius: 5px;
+                            font-family: inherit;
+                            font-size: 100%;
+                            color: inherit;
+                            border: 1px solid #aad4ff; /* Light blue border */
+                        }
+
+
+
+
+                    </style>
+                </head>
+                    <form>
+                        <div class="iti">
+                            <input type="tel" id="mobNum" name="phone">
+                        </div>
+                    </form>
+
+                    <script src="international-telephone-input.js"></script>
+
+                    <div id="details">
+
+
+                    </div>
+                </div>
+                <div class="details-field">
+                    <h2><span style="font-weight: lighter;">Email</span></h2>
+                    <div id="details">
+                        <label><span style="font-weight: lighter; font-size: smaller;">We will send your tickets</span></label>
+                        <input type="text" id="Email" name="Email" size="16" placeholder="Add a valid email ID" required>
+                    </div>
+                    <div class="details-field">
+                        <h2><span style="font-weight: lighter;">Confirm Email</span></h2>
+                        <div id="details">
+                            <label><span style="font-weight: lighter; font-size: smaller;">Just to ensure we got this right</span></label>
+                            <input type="text" id="confirmEmail" name="confirmEmail" size="16" placeholder="Confirm your email ID" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="summary-table">
+                <h2>Summary Table</h2>
+                <!-- Summary table to display the selected options and total payable -->
+                <!-- You can style this table using CSS -->
+                <table id="summary-table">
+                    <tbody>
+
+                        <tr>
+
+                        <td>Date: </td>
+
+                        <td>null</td>
+
+                        </tr>
+
+                        <tr>
+
+                        <td>Time:</td>
+
+                        <td>12:00 pm - 1:00 pm </td>
+
+                        </tr>
+
+                        <tr>
+
+                        <td>Foreigner Adult:</td>
+
+                        <td>0</td>
+
+                        </tr>
+
+                        <tr>
+
+                        <td>Foreigner Child:</td>
+
+                        <td>1</td>
+
+                        </tr>
+
+                        <tr>
+
+                        <td>SL Adult:</td>
+
+                        <td>0</td>
+
+                        </tr>
+
+                        <tr>
+
+                        <td>SL Child:</td>
+
+                        <td>0</td>
+
+                        </tr>
+
+                        <tr>
+
+                        <td>Infant:</td>
+
+                        <td>0</td>
+
+                        </tr>
+
+                        <tr>
+
+                        <td>Total Payable:</td>
+
+                        <td>5 USD</td>
+
+                        </tr>
+
+                        </tbody>
+                  <!-- Summary table content will be updated dynamically by JavaScript -->
+                </table>
+              </section>
+            </p>
+
+        </fieldset>
+
+                 <div id="confirmationForm">
+
+    <h2>Confirmation</h2>
+    <br><br>
+    <p><i style="color: white;">Thank you for your order. Your order has been confirmed with us. You can show this confirmation at the entrance.
+        Following is the summary of your order.</i></p>
+    <br>
+    </div>
+              </section>
+              </div>
+        </fieldset>
+             </form>
+
+<form id="detailsForm">
+        <fieldset>
+            <div class="flex-container">
+                <div class="details-field">
+                    <h2><span style="font-weight: lighter;">Full name</span></h2>
+                    <div id="details">
+                        <label><span style="font-weight: lighter; font-size: smaller;">Same as in your ID</span></label>
+                        <input type="text" id="fullName" name="fullName" size="16" placeholder="Full Name" required>
+                    </div>
+                </div>
+                <div class="details-field">
+                    <h2><span style="font-weight: lighter;">Mobile Number</span></h2>
+                    <div id="details">
+                        <label><span style="font-weight: lighter; font-size: smaller;">We reach out for booking updates over SMS/Whatsapp</span></label>
+                        <input type="tel" id="mobNum" name="mobNum" size="11" maxlength="10" placeholder="Add a valid Mobile Number" required>
+                    </div>
+                </div>
+                <div class="details-field">
+                    <h2><span style="font-weight: lighter;">Confirm email</span></h2>
+                    <div id="details">
+                        <label><span style="font-weight: lighter; font-size: smaller;">Just to ensure we got this right</span></label>
+                        <input type="text" id="confirmEmail" name="confirmEmail" size="16" placeholder="Confirm your email ID" required>
+                    </div>
+                </div>
+                <div class="details-field">
+                    <h2><span style="font-weight: lighter;">Email</span></h2>
+                    <div id="details">
+                        <label><span style="font-weight: lighter; font-size: smaller;">We will send your tickets</span></label>
+                        <input type="text" id="Email" name="Email" size="16" placeholder="Add a valid email ID" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button"  id="btnDetails">Submit</button>
+        </fieldset>
+    </form>
+
+           <form id="paymentForm">
+        <fieldset>
+            <h2><span style="font-weight: lighter;">Card number</span></h2>
+            <div id="payment">
+                <input type="text" id="cardNumber" name="cardNumber" size="16" placeholder="Incomplete field" required>
+            </div>
+
+            <h2><span style="font-weight: lighter;">Expiry Date</span></h2>
+            <div id="payment">
+                <input type="text" id="expiryDate" name="expiryDate" size="11" maxlength="10" placeholder="Card too old" required>
+            </div>
+
+            <h2><span style="font-weight: lighter;">CVC/CVV</span></h2>
+            <div id="payment-right">
+                <input type="text" id="cvcCvv" name="cvcCvv" size="16" placeholder="Incomplete field" required>
+            </div>
+
+            <h2><span style="font-weight: lighter;">Name on card</span></h2>
+            <div id="payment">
+                <input type="text" id="nameOnCard" name="nameOnCard" size="16" placeholder="Name contains invalid characters" required>
+            </div>
+            <button type="button" id="btnPay">Pay</button>
+        </fieldset>
+    </form>
+
+
+
+
+
+
+<script>
+    
+document.addEventListener('DOMContentLoaded', function () {
+  const fullNameInput = document.getElementById('fullName');
+  const mobNumInput = document.getElementById('mobNum');
+  const emailInput = document.getElementById('Email');
+
+  const savedFullName = localStorage.getItem('fullName');
+  const savedMobNum = localStorage.getItem('mobNum');
+  const savedEmail = localStorage.getItem('Email');
+
+  if (savedFullName) {
+      fullNameInput.value = savedFullName;
+  }
+
+  if (savedMobNum) {
+      mobNumInput.value = savedMobNum;
+  }
+
+  if (savedEmail) {
+      emailInput.value = savedEmail;
+  }
+
+  fullNameInput.addEventListener('input', function () {
+      localStorage.setItem('fullName', fullNameInput.value);
+  });
+
+  mobNumInput.addEventListener('input', function () {
+      localStorage.setItem('mobNum', mobNumInput.value);
+  });
+
+  emailInput.addEventListener('input', function () {
+      localStorage.setItem('Email', emailInput.value);
+    });
+
+  const paymentForm = document.getElementById('paymentForm');
+  const ticketBooking = document.getElementById('ticketBooking');
+  const detailsForm = document.getElementById('detailsForm');
+  const paymentSummary = document.getElementById('paymentSummary');
+  const confirmationForm = document.getElementById('confirmationForm');
+
+  paymentForm.style.display = 'none';
+  detailsForm.style.display = 'none';
+  confirmationForm.style.display = 'none';
+
+  function updateSummaryTable() {
+    const date = localStorage.getItem("date");
+    const duration = localStorage.getItem("duration");
+    const foreignerAdultCount = localStorage.getItem("foreignerAdultCount");
+    const foreignerChildCount = localStorage.getItem("foreignerChildCount");
+    const slAdultCount = localStorage.getItem("slAdultCount");
+    const slChildCount = localStorage.getItem("slChildCount");
+    const infantCount = localStorage.getItem("infantCount");
+    const totalPayable = localStorage.getItem("totalPayable");
+
+
+
+        const cells = document.getElementById('summary-table').querySelectorAll('td');
+        cells[1].textContent = date;
+        cells[3].textContent = duration;
+        cells[5].textContent = foreignerAdultCount; // Correct index for Foreigner Adult
+        cells[7].textContent = foreignerChildCount; // Correct index for Foreigner Child
+        cells[9].textContent = slAdultCount; // Correct index for SL Adult
+        cells[11].textContent = slChildCount; // Correct index for SL Child
+        cells[13].textContent = infantCount; // Correct index for Infant
+        cells[15].textContent = `${totalPayable} USD`;
+
+    }
+
+
+
+    updateSummaryTable();
+
+    const detailsButton = document.getElementById('btnDetails');
+    detailsButton.addEventListener('click', function () {
+      ticketBooking.style.display = 'none';
+      detailsForm.style.display = 'none';
+      paymentForm.style.display = 'flex';
+      confirmationForm.style.display = 'none';
+      document.getElementById("confirmationForm").focus();
+    });
+    // Store data in Local Storage when form fields change
+  });
+  </script>
+    </form>
+
+    <center><button onclick="window.location.href='payment.html'">Continue with purchase</button></center>
+
+
+</body>
+</html>

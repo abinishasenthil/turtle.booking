@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <style>
+        /* Center the form on the page */
+        form {
+            display: inline-block;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h2{
+            color: whitesmoke;
+        }
+        p{
+            color: whitesmoke;
+        }
+        p i{
+            color: white;
+        }
+        tr{
+            border: 1px solid black;
+        }
+        th{
+            color: rgb(28, 27, 27);
+        }
+    </style>
+    <title>Confirmation Page</title>
+</head>
+<body>
+  <form>
+    <h2>YOUR ORDER HAS BEEN CONFIRMED!!!</h2></form>
+    <br>
+    <p><i>
+        Thank you for your order. Your order has been confirmed with us. You can show this confirmation at the entrance. Following is the summary of your order.</i></p>
+    <br>
+    <form>
+        <table  id="summary-table">
+            <center><p>Summary</p></center>
+            <tr>
+                <td>Name</th>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td></td>
+            </tr>
+            
+
+            <tr>
+                <td>SL Adult</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>SL Child</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Foreigner Adult</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Foreigner Child</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Infant</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total Payable</td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+function updateSummaryTable() {
+
+    const fullName = localStorage.getItem("fullName");
+    const mobNum = localStorage.getItem("mobNum");
+    const email = localStorage.getItem("Email");
+const date = localStorage.getItem("date");
+const duration = localStorage.getItem("duration");
+const foreignerAdultCount = localStorage.getItem("foreignerAdultCount");
+const foreignerChildCount = localStorage.getItem("foreignerChildCount");
+const slAdultCount = localStorage.getItem("slAdultCount");
+const slChildCount = localStorage.getItem("slChildCount");
+const infantCount = localStorage.getItem("infantCount");
+const totalPayable = localStorage.getItem("totalPayable");
+
+    const cells = document.getElementById('summary-table').querySelectorAll('td');
+    cells[1].textContent = fullName;
+cells[3].textContent = date;
+cells[5].textContent = duration;
+cells[7].textContent = mobNum;
+cells[9].textContent = email;
+cells[11].textContent = slAdultCount; // Correct index for SL Adult
+cells[13].textContent = slChildCount; // Correct index for SL Child
+cells[15].textContent = foreignerAdultCount; // Correct index for Foreigner Adult
+cells[17].textContent = foreignerChildCount; // Correct index for Foreigner Child
+cells[19].textContent = infantCount; // Correct index for Infant
+ cells[21].textContent = `${totalPayable} USD`;
+
+
+}
+
+updateSummaryTable();
+    });
+</script>
+</html>

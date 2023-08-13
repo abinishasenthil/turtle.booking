@@ -1,0 +1,450 @@
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #444444;
+    background: url('https://wallpaperaccess.com/full/39632.jpg') no-repeat center center fixed;
+    background-size: cover;
+    
+  }
+  
+  a {
+    text-decoration: none;
+    color: #2347d9;
+  }
+  
+  a:hover {
+    color: #2d4aca;
+    text-decoration: none;
+  }
+ /* Common styles for all pages */
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://wallpaperaccess.com/full/39632.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the content takes at least the full viewport height */
+  
+}
+
+/* Page title styles */
+h1 {
+  text-align: center;
+  margin: 20px 0; /* Added margin to create space at the top */
+  color: #ffffff; /* Dark blue for a coastal touch */
+}
+
+/* Form styles */
+form {
+  width: 100%;
+  max-width: 500px; /* Increase the form's maximum width */
+  padding: 20px;
+  border: 3px solid #aad4ff; /* Light blue border like coastal waters */
+  border-radius: 100px;
+  background-color: rgba(149, 199, 243, 0.8); /* Pale blue form background with transparency */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Add margin at the top to separate from page title */
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+/* Form input styles */
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #aad4ff; /* Light blue border */
+  border-radius: 5px;
+}
+
+/* Form label styles */
+label {
+  font-weight: bold;
+  color: #1f487e; /* Dark blue labels for a coastal touch */
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+   float: right;
+  margin-left: 20px;
+}
+
+th, td {
+  border: 1px solid #eceef0; /* Light blue table borders */
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #e0f0ff; /* Light blue table header background */
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: #1f487e; /* Dark blue button like coastal waters */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Added margin to create space at the bottom */
+}
+
+/* Center align button */
+.center-button {
+  text-align: center;
+}
+
+/* Additional specific styles for each page can be added here */
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+ 
+  
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+  }
+  
+  
+  .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #d9232d;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+  }
+  
+  .back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+  }
+  
+  .back-to-top:hover {
+    background: #09c5d2;
+    color: #fff;
+  }
+  
+  .back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+footer {
+    background-color: #008080;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+  
+
+  #header {
+    background: white;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 20px 0;
+  }
+  
+  #header.header-scrolled {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+  }
+  
+  #header.header-inner-pages {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  #header .logo a {
+    color: #556270;
+  }
+  
+  #header .logo img {
+    max-height: 40px;
+  }
+  
+  
+  
+ 
+  p {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  h1 {
+      font-family: 'Georgia', serif;
+  }
+  
+  .navbar {
+    padding: 0;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+  }
+  
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #556270;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>a {
+    color: #d9232d;
+  }
+  
+  .navbar .getstarted,
+  .navbar .getstarted:focus {
+    background: #d9232d;
+    padding: 8px 25px;
+    margin-left: 30px;
+    border-radius: 4px;
+    font-weight: 400;
+    color: #fff;
+  }
+  
+  .navbar .getstarted:hover,
+  .navbar .getstarted:focus:hover {
+    color: #fff;
+    background: #e1444d;
+  }
+  
+  .navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+  }
+  
+  .navbar .dropdown ul li {
+    min-width: 200px;
+  }
+  
+  .navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    font-weight: 400;
+  }
+  
+  .navbar .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar .dropdown ul a:hover,
+  .navbar .dropdown ul .active:hover,
+  .navbar .dropdown ul li:hover>a {
+    color: #d9232d;
+  }
+  
+  .navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  
+  .navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+  }
+  
+  .navbar .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
+  
+ header label, #menu{
+    display: none;
+ }
+
+
+
+footer {
+    background-color: #008080;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+.section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #e6636a;
+    margin: 4px 10px;
+    align-items: center;
+  }
+  
+  .section-title p {
+    margin: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #556270;
+    align-items: center;
+  }
+
+
+footer {
+    background-color: #008080;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@media (max-width: 500px) {
+    img {
+        width: 100%;
+        height: auto;
+         background-size:auto
+    }
+header img {
+width: 55px;
+height: 55px;
+}
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-basis: 100%;
+        margin: 20px 0;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+footer {
+    background-color: #008080;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+button{
+    background-color: #008080;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 4px 2px;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: white;
+}
+
